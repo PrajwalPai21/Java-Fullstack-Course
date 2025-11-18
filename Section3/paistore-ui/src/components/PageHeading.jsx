@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+import PageTitle from "./PageTitle";
 
-export const PageHeading = () => {
+export default function PageHeading({ title, children }) {
   return (
-    <div>PageHeading</div>
-  )
+    <div className="page-heading-container">
+      <PageTitle title={title} />
+      <p className="page-heading-paragraph">{children}</p>
+    </div>
+  );
 }
